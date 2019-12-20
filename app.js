@@ -1,94 +1,42 @@
-// let val;
+////////////////////////////// Mouse Events/////////////////////////////////
 
-// //-------------DOM Methods and atributes---------------a
-// val = document;
-// val = document.all;
-// val = document.all[2];
-// val = document.all.length;
-// val = document.head;
-// val = document.body;
-// val = document.doctype;
-// val = document.domain;
-// val = document.URL;
-// val = document.characterSet;
-// val = document.contentType;
+const clearBtn = document.querySelector('.clear-tasks');
+const card = document.querySelector('.card');
+const heading = document.querySelector('h5');
 
-// val = document.forms;
-// val = document.forms[0];
-// val = document.forms[0].id;
-// val = document.forms[0].action;
-// val = document.forms[0].method;
+//Click
+    // clearBtn.addEventListener('click', runEvent);
 
-// val = document.links;
-// val = document.links[0];
-// val = document.links[0].id;
-// val = document.links[0].className;
-// val = document.links[0].classList[0];
+//Double Click
+    // clearBtn.addEventListener('dblclick', runEvent);
 
-// val = document.images;
+//Mousedown
+    // clearBtn.addEventListener('mousedown', runEvent);
 
-// val = document.scripts;
-// val = document.scripts[2].getAttribute('src');
+//Mouseup
+    // clearBtn.addEventListener('mouseup', runEvent);
 
-// let scripts =document.scripts;
+// //MouseEnter
+//     card.addEventListener('mouseenter', runEvent);
 
-// let scriptsArr = Array.from(scripts);
+//  //Mouseleave
+//     card.addEventListener('mouseleave', runEvent);
 
-// scriptsArr.forEach(function (script){
-//     console.log(script.getAttribute('src'));
+// //MouseOver
+// card.addEventListener('mouseover', runEvent);
 
-// });
+// //MouseOut
+//    card.addEventListener('mouseout', runEvent);
 
+// Mousemove
+    card.addEventListener('mousemove', runEvent);
+    
+function runEvent(e){
 
-// console.log(val);
+    console.log(`EVENT TYPE: ${e.type}`);
 
-// // --------------------------------------------------------
+    heading.textContent = ` MouseX:${e.offsetX} MouseY: ${e.offsetY}`;
 
+    document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 100)`;
+};
 
-// // -------------------DOM Selectors --------------------
-
-//     // • Selectors for single elements
-
-//         // document.getElementById()
-
-//             const taskTitle = document.getElementById('task-title');
-//             console.log(taskTitle);
-
-//             // - Get things from the element
-
-//                 console.log(taskTitle.id);
-//                 console.log(taskTitle.className);
-
-//             // - Change styling
-
-//                 taskTitle.style.background = '#333';
-//                 taskTitle.style.color = '#fff';
-//                 taskTitle.style.padding = '10px';
-//                 // taskTitle.style.display = 'none'
-
-//             // - Change content
-
-//                 taskTitle.textContent = 'Task List';
-//                 taskTitle.innerText = 'My Tasks';
-//                 taskTitle.innerHTML = '<span style = "color:red"> Task List  </span>'
-
-        
-             //document.querySelector()
-
-                console.log(document.querySelector('#task-title')); //by id
-                console.log(document.querySelector('.card-title')); //by class
-                console.log(document.querySelector('h5')); // by the element(got first)
-
-                document.querySelector('li').style.color = 'red';
-                document.querySelector('ul li').style.color = 'blue';
-
-                document.querySelector('li:last-child').style.color = 'red';
-                document.querySelector('li:nth-child(3)').style.color = 'yellow';
-
-                document.querySelector('li:nth-child(4)').textContent = 'HelloWorld';
-                document.querySelector('li:nth-child(odd)').style.background = '#ccc';
-                document.querySelector('li:nth-child(even)').style.background = '#f4f4f4';
-
-
-                
-            
