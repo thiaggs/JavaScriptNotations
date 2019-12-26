@@ -1,1 +1,1 @@
-# JavaScriptSandBox Treinando essa merda.
+# Notações, métodos e dicas interessantes para JavaScript
